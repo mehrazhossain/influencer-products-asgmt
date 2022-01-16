@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f2f2;
+}
+main {
+}
+/* ---------------------------------------
+                Navbar Style 
+------------------------------------------*/
+.nav {
+  /* height: 50px; */
+  /* width: 100%; */
+  background-color: #ffffff;
+  position: relative;
+  padding: 10px 100px;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #3a3a3a;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #3a3a3a;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/* ---------------------------------------
+               Top Section Style 
+------------------------------------------*/
+.top-container {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.info {
+  width: 45%;
+  padding: 10px 10%;
+  color: #3a3a3a;
+}
+.info h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.info p {
+  margin-bottom: 30px;
+}
+.info a {
+  text-decoration: none;
+  padding: 5px 40px;
+  background-color: #e02c6d;
+  color: #ffffff;
+  border-radius: 25px;
+}
+
+.image {
+  width: 45%;
+  padding-left: 10%;
+}
+.image img {
+  width: 80%;
+}
+/* ---------------------------------------
+               Company Section Style 
+------------------------------------------*/
+.company-container {
+  width: 800px;
+  background-color: #ffffff;
+  margin: auto;
+  border: 1px solid rgba(77, 73, 73, 0.164);
+}
+.company-container img {
+  padding: 10px;
+}
+/* ---------------------------------------
+          Popular Collection Style 
+------------------------------------------*/
+.popular-heading {
+  text-align: center;
+  margin-top: 40px;
+  color: #3a3a3a;
+}
+
+.card {
+  margin: 30px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+.card > article {
+  /* background-color: #eee5e9; */
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  /* text-align: center; */
+  width: 329px;
+  transition: transform 0.03s;
+}
+
+.card > article h3 {
+  color: #3a3a3a;
+  margin: 5px;
+}
+
+.card > article span i {
+  color: orange;
+  margin-bottom: 5px;
+}
+.card > article span a {
+  color: #3a3a3a;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.card > article:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card > article img {
+  border-radius: 10px;
+  width: 300px;
+  height: 256px;
+  margin: 10px 15px;
+}
+
+.card > article > .card-info {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.see-more {
+  float: right;
+  margin-right: 10%;
+  margin-bottom: 40px;
+}
+.see-more a {
+  text-decoration: none;
+  color: #e02c6d;
+  font-weight: 700;
+}
+/* ---------------------------------------
+          Customer Reviews Style 
+------------------------------------------*/
+.customer-review {
+  margin: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+.customer-review > article {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  width: 329px;
+  transition: transform 0.03s;
+}
+.customer-review > article h3 {
+  color: #0a0826;
+}
+.customer-review > article img {
+  width: 60%;
+  margin: 10px;
+  border-radius: 100%;
+  align-items: center;
+}
+.customer-review > article > .customer-info {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.customer-review-heading {
+  text-align: center;
+  margin-top: 100px;
+  color: #0a0826;
+}
+/* ---------------------------------------
+          Footer Style 
+------------------------------------------*/
+footer {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #0a0826;
+  color: #ffffff;
+  padding: 5%;
+}
+footer > i {
+  padding: 10px;
+  font-size: 30px;
+}
